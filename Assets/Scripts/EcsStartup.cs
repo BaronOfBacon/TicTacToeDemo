@@ -30,6 +30,7 @@ namespace Root {
                 .Add(new AnalyzeClickSystem())
                 .Add(new CreateVewTakenSystem())
                 .Add(new CheckWinSystem())
+                .Add(new WinSystem())
                 // register your systems here, for example:
                 // .Add (new TestSystem1 ())
                 // .Add (new TestSystem2 ())

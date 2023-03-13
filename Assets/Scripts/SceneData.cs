@@ -6,5 +6,6 @@ namespace Root
     {
         public Camera Camera;
         public Transform CameraTransform;
+        public UI UI;
     }
 }
