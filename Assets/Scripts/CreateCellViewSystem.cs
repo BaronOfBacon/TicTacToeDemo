@@ -1,4 +1,3 @@
-using System;
 using Leopotam.Ecs;
 using UnityEngine;
 using Object = UnityEngine.Object;

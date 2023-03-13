@@ -20,6 +20,8 @@ namespace Root
                     position.value = new Vector2Int(i,j);
                 }
             }
+
+            _world.NewEntity().Get<UpdateCameraEvent>();
         }
     }
 }

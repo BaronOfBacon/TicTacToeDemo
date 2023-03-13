@@ -3,11 +3,13 @@ using UnityEngine;
 
 namespace Root {
     sealed class EcsStartup : MonoBehaviour {
+        
+        public Configuration Configuration;
+        public SceneData SceneData;
+        
         EcsWorld _world;
         EcsSystems _systems;
 
-        public Configuration Configuration;
-        
         void Start () {
             // void can be switched to IEnumerator for support coroutines.
             
@@ -20,6 +22,7 @@ namespace Root {
             _systems
                 .Add(new InitializeFieldSystem())
                 .Add(new CreateCellViewSystem())
+                .Add(new SetCameraSystem())
                 // register your systems here, for example:
                 // .Add (new TestSystem1 ())
                 // .Add (new TestSystem2 ())
@@ -27,11 +30,12 @@ namespace Root {
                 // register one-frame components (order is important), for example:
                 // .OneFrame<TestComponent1> ()
                 // .OneFrame<TestComponent2> ()
-                
+                .OneFrame<UpdateCameraEvent>()
                 // inject service instances here (order doesn't important), for example:
                 // .Inject (new CameraService ())
                 // .Inject (new NavMeshSupport ())
                 .Inject(Configuration)
+                .Inject(SceneData)
                 .Init ();
         }
 
