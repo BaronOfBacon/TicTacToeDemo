@@ -17,3 +17,5 @@ MonoBehaviour:
   WinChainLength: 3
   CellView: {fileID: 1245079053168755715, guid: bd61d7d6e66f74b65bb1ab4fab90fac1, type: 3}
   Offset: {x: 0.1, y: 0.1}
+  CrossView: {fileID: 434840726651084178, guid: 0e1cc57700088491686977c9d5cedf01, type: 3}
+  CircleView: {fileID: 2889250563757430553, guid: 977e4941467d1431b9b7139637a3ea0a, type: 3}

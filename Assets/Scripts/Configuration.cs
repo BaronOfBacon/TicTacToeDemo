@@ -10,5 +10,7 @@ namespace Root
         public int WinChainLength = 3;
         public CellView CellView;
         public Vector2 Offset;
+        public SignView CrossView;
+        public SignView CircleView;
     }
 }

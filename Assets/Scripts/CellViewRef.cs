@@ -1,6 +1,6 @@
 namespace Root
 {
-    struct CellVewRef
+    struct CellViewRef
     {
         public CellView value;
     }

@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6928179936901243724}
   - component: {fileID: 1245079053168755715}
+  - component: {fileID: 8189096332119118845}
   m_Layer: 0
   m_Name: CellView
   m_TagString: Untagged
@@ -129,3 +130,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c1e0ee66cb430fa836ffa65ee4ad27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &8189096332119118845
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518980576509773472}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: 0.5, y: 0.5, z: 0}

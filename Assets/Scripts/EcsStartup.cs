@@ -1,3 +1,4 @@
+using System;
 using Leopotam.Ecs;
 using UnityEngine;
 
@@ -19,10 +20,15 @@ namespace Root {
             Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create (_world);
             Leopotam.Ecs.UnityIntegration.EcsSystemsObserver.Create (_systems);
 #endif
+            var gameState = new GameState();
+            
             _systems
                 .Add(new InitializeFieldSystem())
                 .Add(new CreateCellViewSystem())
                 .Add(new SetCameraSystem())
+                .Add(new ControllSystem())
+                .Add(new AnalyzeClickSystem())
+                .Add(new CreateVewTakenSystem())
                 // register your systems here, for example:
                 // .Add (new TestSystem1 ())
                 // .Add (new TestSystem2 ())
@@ -31,11 +37,13 @@ namespace Root {
                 // .OneFrame<TestComponent1> ()
                 // .OneFrame<TestComponent2> ()
                 .OneFrame<UpdateCameraEvent>()
+                .OneFrame<Clicked>()
                 // inject service instances here (order doesn't important), for example:
                 // .Inject (new CameraService ())
                 // .Inject (new NavMeshSupport ())
                 .Inject(Configuration)
                 .Inject(SceneData)
+                .Inject(gameState) 
                 .Init ();
         }
 
