@@ -1,6 +1,6 @@
 namespace Root
 {
-    struct Cell
+    public struct Cell
     {
         
     }

@@ -11,7 +11,10 @@ namespace Root
         {
             foreach (var index in _filter)
             {
-                _filter.GetEntity(index).Get<Taken>().value = _gameState.CurrentSign;
+                ref var entity = ref _filter.GetEntity(index);
+                entity.Get<Taken>().value = _gameState.CurrentSign;
+                entity.Get<CheckWinEvent>();
+                
                 _gameState.CurrentSign = _gameState.CurrentSign == SignType.Circle ? SignType.Cross : SignType.Circle;
             }
         }

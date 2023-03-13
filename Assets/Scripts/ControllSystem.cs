@@ -18,6 +18,7 @@ namespace Root
                 if (Physics.Raycast(ray, out var hitInfo))
                 {
                     var cellView = hitInfo.collider.GetComponent<CellView>();
+                    
                     if (cellView)
                     {
                         cellView.entity.Get<Clicked>();

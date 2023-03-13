@@ -3,10 +3,11 @@ using UnityEngine;
 
 namespace Root
 {
-    internal class InitializeFieldSystem : IEcsInitSystem
+    internal class  InitializeFieldSystem : IEcsInitSystem
     {
         private Configuration _configuration;
         private EcsWorld _world;
+        private GameState _gameState;
         
         public void Init()
         {
@@ -18,6 +19,8 @@ namespace Root
                     cellEntity.Get<Cell>();
                     ref var position = ref cellEntity.Get<Position>();
                     position.value = new Vector2Int(i,j);
+                    
+                    _gameState.Cells[position.value] = cellEntity;
                 }
             }
 

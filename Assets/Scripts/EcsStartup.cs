@@ -29,6 +29,7 @@ namespace Root {
                 .Add(new ControllSystem())
                 .Add(new AnalyzeClickSystem())
                 .Add(new CreateVewTakenSystem())
+                .Add(new CheckWinSystem())
                 // register your systems here, for example:
                 // .Add (new TestSystem1 ())
                 // .Add (new TestSystem2 ())
@@ -38,6 +39,7 @@ namespace Root {
                 // .OneFrame<TestComponent2> ()
                 .OneFrame<UpdateCameraEvent>()
                 .OneFrame<Clicked>()
+                .OneFrame<CheckWinEvent>()
                 // inject service instances here (order doesn't important), for example:
                 // .Inject (new CameraService ())
                 // .Inject (new NavMeshSupport ())

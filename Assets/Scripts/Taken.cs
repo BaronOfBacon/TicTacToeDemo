@@ -1,6 +1,6 @@
 namespace Root
 {
-    internal struct Taken
+    public struct Taken
     {
         public SignType value;
     }
